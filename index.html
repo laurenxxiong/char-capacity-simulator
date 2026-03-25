@@ -279,7 +279,7 @@ function go(){
   const r=calc(cw,tp,fn);if(!r){scr.innerHTML='<div style="display:flex;align-items:center;justify-content:center;min-height:120px;color:var(--text3)">Too narrow</div>';document.getElementById('sumC').innerHTML='';return}
   const bw=Math.round(cw*SCALE),fsPx=Math.max(10,Math.round(tp.fs*SCALE));
   // Clamp text block width to not exceed screen content area
-  const maxBw=phW-32;
+  const maxBw=phW-64;
   const clampedBw=Math.min(bw,maxBw);
 
   if(S.lang==='zh'){scr.appendChild(mkB(ZH,clampedBw,fsPx,tp.wt,lines,cw,tp.ls*SCALE,r.cjk+'/line',fontCSS))}
